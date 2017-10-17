@@ -11,6 +11,35 @@ HideTrayTip()
 			}
 	}
 	
-Tip(Title, Text, Duration)
+Tip(Name)
 	{
-		
+	if (TipActivated != "NO")
+		{
+			HideTrayTip()
+			
+			if(Name = "StartCalibration")
+				{
+					TrayTip, Calibration Started, Delimiting the Interface..
+				}
+			else if(Name = "EndCalibration")
+				{
+					Traytip, Calibration Ended, Calibration ended up successfuly!
+				}
+			else if(Name = "VillagerInterface")
+				{
+					Traytip, Interface Detected!, A villager Interface is detected!
+				}		
+			else if(Name = "CraftingInterface")
+				{
+					Traytip, Interface Detected!, A Crafting Interface is detected!
+				}
+			else if(Name = "InventoryInterface")
+				{
+					Traytip, Interface Detected!, An Inventory Interface is detected!
+				}
+			else if(Name = "EffectInventoryInterface")
+				{
+					Traytip, Interface Detected!, You've got effects on your character, can't launch the macro!
+				}
+		}	
+	}	

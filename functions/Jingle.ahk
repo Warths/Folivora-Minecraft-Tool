@@ -1,5 +1,5 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#Include PlaySound.ahk
+#Include PlayNote.ahk
 
 Jingle(JingleName)
 	{

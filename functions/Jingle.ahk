@@ -5,7 +5,30 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Jingle(JingleName)
 	{
-		if(SoundActivated != "NO")
+	SoundActivated = "Wav"
+		if(SoundActivated = "Wav")
+		{
+			if(JingleName = "Success") ; Run when a full event went successfully 
+				{
+					SoundPlay, %A_ScriptDir%\sounds\Error.wav
+				}
+			else if(JingleName = "Select") ; Run when a tile is selected
+				{
+					SoundPlay, %A_ScriptDir%\sounds\Select.wav
+				} 
+			else if(JingleName = "Unselect") ; Run when a selected tile is unselected
+				{
+					SoundPlay, %A_ScriptDir%\sounds\Unselect.wav
+				} 
+			else if(JingleName = "Error") ; Run when something is not possible (Unselectable tile?)
+				{
+					SoundPlay, %A_ScriptDir%\sounds\Error.wav
+				} 
+			else if(JingleName = "CriticalError") ; Run when something went wrong (Indicates the user that he needs to do the configuration process again)
+				{
+					SoundPlay, %A_ScriptDir%\sounds\CriticalError.wav
+				}
+		} else if(SoundActivated = "Midi")
 		{
 			if(JingleName = "Success") ; Run when a full event went successfully 
 				{
@@ -45,7 +68,8 @@ Jingle(JingleName)
 					PlayNote("B", 3, 120)
 					PlayNote("E", 4, 480)
 				}
-		}
+		}		
+	
 	}
 	
 ^Numpad1::

@@ -1,4 +1,5 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#Include Coordinates.ahk
 ^Numpad9:: Reload
 
 StartDetection()
@@ -14,6 +15,10 @@ StartDetection()
 			}
 	}
 
+InterfaceDetection()
+	{
+		
+	
 ^Numpad1::
 StartDetection()
 if StartDetection()

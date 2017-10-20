@@ -9,7 +9,9 @@ StartDetection()
 				KeyWait, RButton, D
 				KeyWait, LButton, D T0.5
 				if (ErrorLevel = 0)
-					{						
+					{
+						WindowRelatives(WinX, WinY, WinWidth, WinHeight, MidWidth, MidHeight)
+						MouseGetPos, PosX, PosY
 						return true
 					}
 			}
@@ -17,14 +19,17 @@ StartDetection()
 
 InterfaceDetection()
 	{
-		WindowRelatives(WinX, WinY, WinWidth, WinHeight, MidWidth, MidHeight)
 		PixelSearch, , , MidWidth, MidHeigth, MidWidth, MidHeight, 0xC6C6C6, 0, Fast
 		if (ErrorLevel = 1)
 			{
 				return false
 			}
 		return true
-	}	
+	}
+
+InterfaceCalculation()
+	{
+		
 	
 ^Numpad1::
 StartDetection()

@@ -1,6 +1,4 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-^Numpad9:: Reload
-
 
 PlayNote(note, pitch, length)
     {

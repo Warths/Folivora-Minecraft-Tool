@@ -17,7 +17,7 @@ StartDetection()
 
 InterfaceDetection()
 	{
-		
+	}	
 	
 ^Numpad1::
 StartDetection()

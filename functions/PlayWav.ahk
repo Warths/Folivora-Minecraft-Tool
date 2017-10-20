@@ -3,10 +3,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ^Numpad9:: Reload
 
 ^Numpad1::
- SoundPlay, %A_ScriptDir%\sounds\Error.wav
+ Jingle(CriticalError)
  sleep 3000
- SoundPlay, %A_ScriptDir%\sounds\CriticalError.wav
+ Jingle(Select)
  sleep 3000
+<<<<<<< Updated upstream
  SoundPlay, %A_ScriptDir%\sounds\Select.wav
  sleep 300  
  SoundPlay, %A_ScriptDir%\sounds\Select.wav
@@ -30,6 +31,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
   SoundPlay, %A_ScriptDir%\sounds\Success.wav
  sleep 3000
   SoundPlay, %A_ScriptDir%\sounds\Unselect.wav
+=======
+ Jingle(Unselect)
+ sleep 3000 
+ Jingle(Success)
+>>>>>>> Stashed changes
  sleep 3000
+ Jingle(Error)
+
  
  

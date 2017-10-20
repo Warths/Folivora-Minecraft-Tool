@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #Include Jingle.ahk
 
 ^Numpad1::
-Jingle(Searching)
+Jingle("Searching")
 sleep 3000
-Jingle(Success)
+Jingle("Success")
 Return

@@ -4,12 +4,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Jingle(JingleName)
 	{
-	SoundType = "Wav"
-		if(SoundTyped = "Wav")
+	SoundType = Wav
+		if(SoundType = "Wav")
 		{
 			if(JingleName = "Success") ; Run when a full event went successfully 
 				{
-					SoundPlay, %A_ScriptDir%\sounds\Error.wav
+					SoundPlay, %A_ScriptDir%\sounds\Success.wav
 				}
 			else if(JingleName = "Select") ; Run when a tile is selected
 				{

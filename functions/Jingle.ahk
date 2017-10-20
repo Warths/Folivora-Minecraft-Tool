@@ -28,6 +28,10 @@ Jingle(JingleName)
 				{
 					SoundPlay, %A_ScriptDir%\sounds\CriticalError.wav
 				}
+			else if(JingleName = "Searching") ; Run when a background task is occuring
+				{
+					SoundPlay, %A_ScriptDir%\sounds\Searching.wav
+				}
 		} else if(SoundType = "Midi")
 		{
 			if(JingleName = "Success") ; Run when a full event went successfully 

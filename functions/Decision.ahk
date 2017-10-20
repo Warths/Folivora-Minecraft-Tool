@@ -17,11 +17,23 @@ StartDetection()
 
 InterfaceDetection()
 	{
+		WindowRelatives(WinX, WinY, WinWidth, WinHeight, MidWidth, MidHeight)
+		PixelSearch, , , MidWidth, MidHeigth, MidWidth, MidHeight, 0xC6C6C6, 0, Fast
+		if (ErrorLevel = 1)
+			{
+				return false
+			}
+		return true
 	}	
 	
 ^Numpad1::
 StartDetection()
-if StartDetection()
-{
-MsgBox, true
-}
+InterfaceDetection()
+if (InterfaceDetection() = true)
+	{
+		MsgBox, true
+	}
+else
+	{
+		MsgBox, false
+	}

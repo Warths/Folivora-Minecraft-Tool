@@ -1,0 +1,6 @@
+PlayNote(note, pitch, length) --> returns the note you want, with the duration of the note you want
+Jingle(JingleName) --> plays the jingle you want amongst the predefined ones
+HideTrayTip() --> hides the current notification from TrayTipe for Windows 10
+Tip(Name) --> displays useful messages to tell what the macro is doing
+StartDetection() --> detects the keys that start the macro
+

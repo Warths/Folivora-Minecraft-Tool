@@ -1,0 +1,2 @@
+SoundType --> parameter that can be changed by the user, defines the type of the sounds played (MIDI or WAV)
+TipActivated --> parameter that can be changed by the user, defines if tips shall be displayed for the user

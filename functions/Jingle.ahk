@@ -5,8 +5,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Jingle(JingleName)
 	{
-	SoundActivated = "Wav"
-		if(SoundActivated = "Wav")
+	SoundType = "Wav"
+		if(SoundTyped = "Wav")
 		{
 			if(JingleName = "Success") ; Run when a full event went successfully 
 				{
@@ -28,7 +28,7 @@ Jingle(JingleName)
 				{
 					SoundPlay, %A_ScriptDir%\sounds\CriticalError.wav
 				}
-		} else if(SoundActivated = "Midi")
+		} else if(SoundType = "Midi")
 		{
 			if(JingleName = "Success") ; Run when a full event went successfully 
 				{

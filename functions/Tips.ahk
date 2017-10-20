@@ -1,5 +1,6 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ^Numpad9:: Reload
+
 HideTrayTip() 
 	{
 		TrayTip  ; Attempt to hide it the normal way.

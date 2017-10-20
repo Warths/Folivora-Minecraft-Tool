@@ -74,16 +74,3 @@ Jingle(JingleName)
 		}		
 	
 	}
-	
-^Numpad1::
-Sleep 1000
-Jingle("Success")
-Sleep 2000
-Jingle("Select")
-Sleep 2000
-Jingle("Unselect")
-Sleep 2000
-Jingle("Error")
-Sleep 2000
-Jingle("CriticalError")
-Reload

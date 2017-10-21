@@ -2,7 +2,7 @@
 #Include Coordinates.ahk
 ^Numpad9:: Reload
 
-StartDetection()
+WaitForStart()
 	{
 		Loop
 			{
@@ -32,7 +32,7 @@ InterfaceCalculation()
 		
 	
 ^Numpad1::
-StartDetection()
+WaitForStart()
 InterfaceDetection()
 if (InterfaceDetection() = true)
 	{

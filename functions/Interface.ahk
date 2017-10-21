@@ -35,12 +35,11 @@ InterfaceCalculation()
 		Global
 		QuartWindow()
 		SendMode Event
-		
 		MouseMove, QuartWidth, QuartHeight
-		PixelSearch, LeftBorderInterface, 		, 0, MidHeight, MidWidth, MidHeight, 0xC6C6C6, , Fast
-		PixelSearch, 		, TopBorderInterface, MidWidth, 0, MidWidth, MidHeight, 0xC6C6C6, , Fast
-		PixelSearch, RightBorderInterface, 		, MidWidth, MidHeight, WinWidth, MidHeight, 0x555555, , Fast
-		PixelSearch, 		, BottomBorderInterface, MidWidth, MidHeight, MidWidth, WinHeight, 0x555555, , Fast
+		PixelSearch, LeftBorderInterface,		, 0, MidHeight, MidWidth, MidHeight, 0xC6C6C6, , Fast
+		PixelSearch, , TopBorderInterface, MidWidth, 0, MidWidth, MidHeight, 0xC6C6C6, , Fast
+		PixelSearch, RightBorderInterface, , LeftBorderInterface, TopBorderInterface, WinWidth, TopBorderInterface, 0x555555, , Fast
+		PixelSearch, , BottomBorderInterface, LeftBorderInterface, TopBorderInterface, LeftBorderInterface, WinHeight, 0x555555, , Fast
 		RightBorderInterface--
 		BottomBorderInterface--
 		Sleep 2000

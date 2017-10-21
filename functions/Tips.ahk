@@ -39,7 +39,12 @@ Tip(Name)
 				}
 			else if(Name = "EffectInventoryInterface")
 				{
-					Traytip, Interface Detected!, You've got effects on your character, can't launch the macro!
+					Traytip, Interface Detected!, You've got effects on your character, cant launch the macro!
 				}
+			else if(Name = "WaitForStart")
+				{
+					Traytip, Folivora Launched, Waiting for user's command..
+				}
+
 		}	
 	}	

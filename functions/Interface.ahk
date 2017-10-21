@@ -1,5 +1,6 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Include Coordinates.ahk
+#Include CallFunction.ahk
 ^Numpad9:: Reload
 
 WaitForStart()
@@ -29,10 +30,11 @@ InterfaceDetection()
 
 InterfaceCalculation()
 	{
+	}
 		
 	
 ^Numpad1::
-WaitForStart()
+CallFunction(WaitForStart)
 InterfaceDetection()
 if (InterfaceDetection() = true)
 	{

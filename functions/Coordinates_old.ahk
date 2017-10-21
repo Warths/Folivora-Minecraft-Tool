@@ -1,23 +1,20 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 
-WindowRelatives()
+WindowRelatives(ByRef WinX, ByRef WinY, ByRef WinWidth, ByRef WinHeight)
 	{
-		Global
 		WinGetPos, WinX, WinY, WinWidth, WinHeight, Minecraft
 		return
 	}
 	
-MidWindow()
+MidWindow(ByRef MidWidth, ByRef MidHeight)
 	{
-		Global
 		MidWidth := WinWidth / 2
 		MidHeight := WinHeight / 2
 		return
 	}
 
-QuartWindow()
+QuartWindow(ByRef QuartWidth, ByRef QuartHeight)
 	{
-		Global
 		QuartWidth := WinWidth / 4
 		QuartHeight := WinHeight / 4
 		return

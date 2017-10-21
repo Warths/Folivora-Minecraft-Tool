@@ -4,13 +4,14 @@
 
 WaitForStart()
 	{
+		Global
 		Loop
 			{
 				KeyWait, RButton, D
 				KeyWait, LButton, D T0.5
 				if (ErrorLevel = 0)
 					{
-						WindowRelatives(WinX, WinY, WinWidth, WinHeight)
+						WindowRelatives()
 						MouseGetPos, PosX, PosY
 						return true
 					}
@@ -19,7 +20,8 @@ WaitForStart()
 
 InterfaceDetection()
 	{
-		MidWindow(MidWidth, MidHeight)
+		Global
+		MidWindow()
 		PixelSearch, , , MidWidth, MidHeigth, MidWidth, MidHeight, 0xC6C6C6, 0, Fast
 		if (ErrorLevel = 1)
 			{
@@ -28,16 +30,25 @@ InterfaceDetection()
 		return true
 	}
 
-InterfaceCalculation(ByRef LeftBorderInterface, ByRef RightBorderInterface, ByRef TopBorderInterface, ByRef BottomBorderInterface)
+InterfaceCalculation()
 	{
-		QuartWindow(QuartWidth, QuartHeight)
+		Global
+		QuartWindow()
 		SendMode Event
 		MouseMove, QuartWidth, QuartHeight
-		PixelSearch, LeftBorderInterface, , 0, MidHeight, MidWidth, MidHeight, 0xC6C6C6, , Fast
+		PixelSearch, LeftBorderInterface,		, 0, MidHeight, MidWidth, MidHeight, 0xC6C6C6, , Fast
 		PixelSearch, , TopBorderInterface, MidWidth, 0, MidWidth, MidHeight, 0xC6C6C6, , Fast
 		PixelSearch, RightBorderInterface, , LeftBorderInterface, TopBorderInterface, WinWidth, TopBorderInterface, 0x555555, , Fast
-		RightBorderInterface--
 		PixelSearch, , BottomBorderInterface, LeftBorderInterface, TopBorderInterface, LeftBorderInterface, WinHeight, 0x555555, , Fast
-		BottomBorderInterface--
+		Sleep 2000
+		MouseMove, LeftBorderInterface, MidHeight
+		Sleep 2000
+		MouseMove, RightBorderInterface, MidHeight
+		Sleep 2000
+		MouseMove, MidWidth, TopBorderInterface
+		Sleep 2000
+		MouseMove, MidWidth, BottomBorderInterface
+		Sleep 2000
+		
 		
 	}

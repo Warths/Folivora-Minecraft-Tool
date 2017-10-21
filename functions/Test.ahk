@@ -6,5 +6,4 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ^Numpad1::
 CallFunction(WaitForStart)
 InterfaceDetection()
-InterfaceCalculation(LeftBorderInterface, RightBorderInterface, TopBorderInterface, BottomBorderInterface)
-MsgBox, %BottomBorderInterface%
+InterfaceCalculation()

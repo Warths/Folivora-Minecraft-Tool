@@ -6,6 +6,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ^Numpad1::
 Jingle("Searching")
-sleep 3000
+sleep 7000
 Jingle("Success")
 Return

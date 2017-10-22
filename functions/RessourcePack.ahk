@@ -74,5 +74,16 @@ RessourcePackMenuDetection()
 			}
 		return false
 	}
-
+	
+EscMenuDetection()
+	{
+		Global
+		PixelSearch, , CheckEsc, MidWidth, 0, MidWidth, MidHeight, 0xAAAAAA, , Fast
+		if (ErrorLevel = 0)
+			{
+				return true
+			}
+		return false
+	}
+		
 		

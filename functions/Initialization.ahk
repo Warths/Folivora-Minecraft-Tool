@@ -39,6 +39,9 @@ RessourcePack()
 			{
 			}
 		Send {Esc}
+		while EscMenuDetection()
+			{
+			}
 	}
 	
 AccessInterface()

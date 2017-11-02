@@ -78,7 +78,7 @@ RessourcePackMenuDetection()
 EscMenuDetection()
 	{
 		Global
-		PixelSearch, , CheckEsc, MidWidth, 0, MidWidth, MidHeight, 0xAAAAAA, , Fast
+		PixelSearch, , CheckEsc, MidWidth, TopBorderEsc, MidWidth, TopBorderEsc, 0xAAAAAA, , Fast
 		if (ErrorLevel = 0)
 			{
 				return true

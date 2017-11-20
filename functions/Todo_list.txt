@@ -1,0 +1,38 @@
+;_________________________________________________
+
+;To-Do list with required functions and some ideas
+;_________________________________________________
+
+;Interface Detection
+; REQUIRED
+InterfaceDetection() ; Delimitation of the interface with PixelSearch.
+					 ; Define the time of interface
+					 ; Calculate the interface maths in global variables (In array?)
+					 ; Return the type of interface (Short number? String?)
+; OPTIONNAL
+
+
+;Interface interactions : 
+
+; REQUIRED
+MoveMouseToSlot(X,Y) ; X is beetween 0 and 8, Y is beetween 0 and 3.
+					 ; X can also be "craft" while Y is beetween 0 and 9 or "Output"
+					 ; X can be "trade" while Y can be "Slot1", "Slot2", "Output", "Previous", "Next"
+					 
+
+; OPTIONNAL
+Interact(X) ; Click on an interface button on call. CAN BE EXPANDED TO SUPPORT ALL INTERACTIONS. MAY USE 2 PARAMETERS (FROM, TO)
+			; X can be : 
+			; GameMenu
+			; BackToGame
+			; Options
+			; Disconnect
+			; Controls
+			; ResourcePacks
+				; ResourcePacksRemove
+				; ResourcePacksAdd
+				; ResourcePackDone
+			; OptionsDone
+	
+			
+; Configuration
